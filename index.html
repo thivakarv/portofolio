@@ -20,72 +20,71 @@
     </header>
 
     <main>
+        <!-- Hero Section -->
         <section id="home" class="hero">
             <div class="hero-content">
                 <h1>Welcome to My Portfolio</h1>
-                <p>My name is Thivakar V. I am a final year ECE student at Vel Tech Multi Dr. Ranga Dr. Sakunthala Engineering College, Chennai. I am passionate about becoming an embedded system engineer and I am currently practicing embedded systems, Linux, Git/GitHub, C programming, and firmware development. I am a fast learner and enthusiastic about new technologies.</p>
-                <p>Explore my projects and feel free to contact me!</p>
+                <p>I am Thivakar V, an aspiring Embedded Systems Engineer.</p>
             </div>
         </section>
 
+        <!-- About Section -->
         <section id="about" class="about">
-            <div class="about-content">
-                <h1>About Me</h1>
-                <img src="images/thivakarv.jpg" alt="Thivakar V" class="profile-image" id="profile-image">
-                <p>My name is Thivakar V, currently pursuing my final year in Electronics and Communication Engineering at Vel Tech Multi Dr. Ranga Dr. Sakunthala Engineering College, Chennai. I aspire to become an embedded system engineer.</p>
-                <p>I am proficient in embedded systems, Linux, Git/GitHub, C programming, and firmware development. I am a beginner but a fast learner in these fields.</p>
+            <h2>About Me</h2>
+            <div class="profile">
+                <img src="images/thivakarv.jpg" alt="Thivakar V" class="profile-image">
+                <p>I am currently pursuing my final year in Electronics and Communication Engineering at Vel Tech Multi Dr. Rangarajan Dr. Sakunthala Engineering College, Avadi, Chennai.</p>
             </div>
         </section>
 
+        <!-- Skills Section -->
         <section id="skills" class="skills">
             <h2>Skills</h2>
             <ul class="skills-list">
-                <li class="skills-item">
-                    <h3>Embedded Systems</h3>
-                    <p>Proficient in embedded systems development.</p>
-                </li>
-                <li class="skills-item">
-                    <h3>Linux</h3>
-                    <p>Experienced with Linux operating systems.</p>
-                </li>
-                <li class="skills-item">
-                    <h3>Git / GitHub</h3>
-                    <p>Version control and collaboration using Git and GitHub.</p>
-                </li>
-                <li class="skills-item">
-                    <h3>C Programming</h3>
-                    <p>Strong foundation in C programming language.</p>
-                </li>
-                <li class="skills-item">
-                    <h3>Firmware Development</h3>
-                    <p>Hands-on experience in firmware development.</p>
-                </li>
-                <li class="skills-item">
-                    <h3>Fast Learner</h3>
-                    <p>Quickly adapt to new technologies and concepts.</p>
-                </li>
+                <li class="skills-item">Embedded Systems</li>
+                <li class="skills-item">Linux</li>
+                <li class="skills-item">Git / GitHub</li>
+                <li class="skills-item">C Programming</li>
+                <li class="skills-item">Firmware Development</li>
             </ul>
         </section>
 
+        <!-- Projects Section -->
         <section id="projects" class="projects">
-            <h1>Projects</h1>
+            <h2>Projects</h2>
             <div class="project-item">
                 <img src="images/project1.jpg" alt="Project 1">
-                <h2>Traffic System Management using RFID</h2>
-                <p>A project focused on managing traffic systems using RFID technology.</p>
+                <h3>Traffic System Management using RFID</h3>
+                <p>Description of the project goes here.</p>
             </div>
             <div class="project-item">
                 <img src="images/project2.jpg" alt="Project 2">
-                <h2>Home Automations</h2>
-                <p>Implementing automation systems for home appliances.</p>
+                <h3>Home Automation</h3>
+                <p>Description of the project goes here.</p>
             </div>
         </section>
 
+        <!-- Contact Section -->
         <section id="contact" class="contact">
-            <h1>Contact</h1>
-            <p>Email: thivakar86@gmail.com</p>
-            <p>Phone: 9361939795</p>
-            <p>Location: Chennai, India</p>
+            <h2>Contact Me</h2>
+            <form name="contact" method="POST" data-netlify="true">
+                <input type="hidden" name="form-name" value="contact">
+                
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit" onclick="submitForm()">Send Message</button>
+            </form>
+
+            <div id="confirmation-message" style="display: none;">
+                <p>Thank you for your message! I will get back to you soon.</p>
+            </div>
         </section>
     </main>
 
@@ -93,6 +92,17 @@
         <p>&copy; 2024 Thivakar V. All rights reserved.</p>
     </footer>
 
-    
+    <script src="script.js"></script>
+    <script>
+        function submitForm() {
+            // Display confirmation message
+            document.getElementById("confirmation-message").style.display = "block";
+
+            // Optionally, you can clear the form fields after submission
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("message").value = "";
+        }
+    </script>
 </body>
 </html>
