@@ -67,7 +67,7 @@
         <!-- Contact Section -->
         <section id="contact" class="contact">
             <h2>Contact Me</h2>
-            <form name="contact" method="POST" data-netlify="true">
+            <form name="contact" method="POST" action="/success" data-netlify="true">
                 <input type="hidden" name="form-name" value="contact">
                 
                 <label for="name">Name:</label>
@@ -79,7 +79,7 @@
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" rows="4" required></textarea>
                 
-                <button type="submit" onclick="submitForm()">Send Message</button>
+                <button type="submit">Send Message</button>
             </form>
 
             <div id="confirmation-message" style="display: none;">
@@ -91,18 +91,5 @@
     <footer>
         <p>&copy; 2024 Thivakar V. All rights reserved.</p>
     </footer>
-
-    <script src="script.js"></script>
-    <script>
-        function submitForm() {
-            // Display confirmation message
-            document.getElementById("confirmation-message").style.display = "block";
-
-            // Optionally, you can clear the form fields after submission
-            document.getElementById("name").value = "";
-            document.getElementById("email").value = "";
-            document.getElementById("message").value = "";
-        }
-    </script>
 </body>
 </html>
